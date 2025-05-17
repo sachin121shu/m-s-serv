@@ -129,6 +129,22 @@
       text-decoration: underline;
       margin: 0 0.5em;
     }
+    details {
+      background: #fff;
+      padding: 1em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: bold;
+      font-size: 1.1em;
+      outline: none;
+    }
+    .review {
+      transition: opacity 0.5s;
+    }
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -148,6 +164,8 @@
     <a href="#about">About</a>
     <a href="#toys">Toys</a>
     <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <a href="#location">Location</a>
   </nav>
@@ -193,6 +211,46 @@
   </div>
 </section>
 
+<section id="reviews" class="section" data-aos="fade-up">
+  <h2>What Parents Say</h2>
+  <div id="review-carousel" class="choose-us-grid">
+    <div class="choose-card review">
+      <p>“Toy Wonderland has become our go-to toy store. The quality is excellent, and my kids love everything we’ve bought!”</p>
+      <strong>— Maria T., Portland</strong>
+    </div>
+    <div class="choose-card review" style="display: none;">
+      <p>“Friendly staff, great selection, and fair prices. I always find unique gifts here.”</p>
+      <strong>— Jonathan K., Gresham</strong>
+    </div>
+    <div class="choose-card review" style="display: none;">
+      <p>“My daughter adores the Mini Chef Kitchen set we got from Toy Wonderland. Highly recommend!”</p>
+      <strong>— Ayesha R., Vancouver</strong>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section" data-aos="fade-up">
+  <h2>Frequently Asked Questions</h2>
+  <div class="about">
+    <details>
+      <summary><strong>Do you offer gift wrapping?</strong></summary>
+      <p>Yes! Complimentary gift wrapping is available in-store and during checkout online.</p>
+    </details>
+    <details>
+      <summary><strong>Are your toys safety tested?</strong></summary>
+      <p>All our toys meet ASTM and CPSIA safety standards for children.</p>
+    </details>
+    <details>
+      <summary><strong>Can I return items?</strong></summary>
+      <p>Absolutely. We have a 30-day hassle-free return policy. Just keep your receipt!</p>
+    </details>
+    <details>
+      <summary><strong>Do you sell eco-friendly toys?</strong></summary>
+      <p>Yes! We offer a wide range of wooden, biodegradable, and sustainably sourced toys.</p>
+    </details>
+  </div>
+</section>
+
 <section id="contact" class="section" data-aos="fade-up">
   <h2>Contact Us</h2>
   <form id="contactForm">
@@ -218,12 +276,24 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+
+  // Contact form handler
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("contactForm").addEventListener("submit", function(e) {
       e.preventDefault();
       document.getElementById("formMessage").style.display = "block";
       this.reset();
     });
+
+    // Review carousel
+    let currentReview = 0;
+    const reviews = document.querySelectorAll(".review");
+
+    setInterval(() => {
+      reviews[currentReview].style.display = "none";
+      currentReview = (currentReview + 1) % reviews.length;
+      reviews[currentReview].style.display = "block";
+    }, 5000);
   });
 </script>
 
