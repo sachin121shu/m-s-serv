@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toy Wonderland - Toy Shop</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fffaf0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #ffb347, #ffcc33);
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #fff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.5em;
+    }
+    nav a {
+      margin: 0.5em 1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x500/?kids,toys') center/cover no-repeat;
+      padding: 4em 1em;
+      text-align: center;
+      color: #e91e63;
+      font-size: 2em;
+      text-shadow: 2px 2px 6px #fff;
+    }
+    .section {
+      padding: 2em 1em;
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 230px;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about, .choose-us {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+    .choose-us-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+    .choose-card {
+      background: #fff;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75em;
+      margin: 0.5em 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #ff9800;
+      color: #fff;
+      padding: 0.75em 2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #e68900;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 1em;
+    }
+    .footer {
+      background: #ffb347;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 0.5em;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Toy Wonderland</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#toys">Toys</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Explore a World of Fun and Imagination!</h2>
+</div>
+
+<section id="about" class="section" data-aos="fade-up">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>Welcome to Toy Wonderland – your one-stop shop for the most delightful, safe, and imaginative toys. We’re passionate about sparking joy and creativity in every child’s life. Our collection includes toys that help build minds, friendships, and happy memories. With quality you can trust and designs kids love, we’re proud to be part of childhoods everywhere.</p>
+    <p>Our store has been trusted by families for over a decade, offering everything from educational games to action-packed figures, all under one roof. Whether you're shopping for toddlers or teens, our curated selection promises something magical for everyone.</p>
+  </div>
+</section>
+
+<section id="toys" class="section" data-aos="fade-up">
+  <h2>Top Toys</h2>
+  <div class="products">
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,car"><h3>Speed Racer Car</h3><p>Zoom into fun with this colorful and durable toy car.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,doll"><h3>Magic Princess Doll</h3><p>Bring fairytales to life with this enchanting doll.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?lego"><h3>Creative Building Blocks</h3><p>Unleash creativity with endless building possibilities.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,plane"><h3>Sky Flyer Plane</h3><p>Soar through the skies with this lightweight plane.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,puzzle"><h3>Brainy Puzzle</h3><p>Challenge your brain with this fun puzzle game.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,kitchen"><h3>Mini Chef Kitchen</h3><p>Cook up pretend meals with this kitchen set.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,animals"><h3>Wild Animal Pack</h3><p>Jungle adventures begin with our safari collection!</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,blocks"><h3>Rainbow Stackers</h3><p>Colorful blocks to build, stack, and learn.</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,rocket"><h3>Rocket Explorer</h3><p>Launch into fun with this cool space rocket!</p></div>
+    <div class="product"><img src="https://source.unsplash.com/250x250/?toy,doctor"><h3>Little Doctor Kit</h3><p>Heal your stuffed animals with this fun doctor set.</p></div>
+  </div>
+</section>
+
+<section id="why" class="section" data-aos="fade-up">
+  <h2>Why Choose Us</h2>
+  <div class="choose-us">
+    <div class="choose-us-grid">
+      <div class="choose-card"><h4>Trusted Quality</h4><p>Only the safest, most durable toys pass our test.</p></div>
+      <div class="choose-card"><h4>Friendly Staff</h4><p>Our team is always ready to help you find the perfect toy.</p></div>
+      <div class="choose-card"><h4>Great Prices</h4><p>Fun shouldn’t break the bank – shop at unbeatable value.</p></div>
+      <div class="choose-card"><h4>Fun for All Ages</h4><p>From infants to teens – toys for every stage of childhood.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="formMessage" style="color:green;display:none;margin-top:1em;">Thank you! We'll be in touch soon.</p>
+  </form>
+</section>
+
+<section id="location" class="section" data-aos="fade-up">
+  <h2>Visit Our Store</h2>
+  <p>126 N Main Ave, Gresham, OR 97030</p>
+  <p>Phone: (503) 489-5631</p>
+  <iframe src="https://www.google.com/maps?q=126+N+Main+Ave,+Gresham,+OR+97030&output=embed"></iframe>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Toy Wonderland | <a href="#">Privacy Policy</a> | <a href="#">Return Policy</a></p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("formMessage").style.display = "block";
+      this.reset();
+    });
+  });
+</script>
+
+</body>
+</html>
